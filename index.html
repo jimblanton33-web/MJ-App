@@ -7,83 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Staatliches&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0a0a0a;
-        color: #f5f5f5;
-        margin: 0;
-        overflow-x: hidden;
-      }
-      /* Hide scrollbars but keep functionality */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      @keyframes glow-pulse {
-        0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(239, 68, 68, 0.2); }
-        50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.7), 0 0 70px rgba(239, 68, 68, 0.5); }
-      }
-
-      .special-glow {
-        animation: glow-pulse 3s infinite ease-in-out;
-      }
-
-      .scanline {
-        width: 100%;
-        height: 100px;
-        z-index: 5;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
-        opacity: 0.1;
-        position: absolute;
-        bottom: 100%;
-        animation: scanline 6s linear infinite;
-      }
-
-      @keyframes scanline {
-        0% { bottom: 100%; }
-        100% { bottom: -100px; }
-      }
-
-      @keyframes cart-pop {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
-      }
-
-      @keyframes wink {
-        0%, 90%, 100% { transform: scaleY(1); }
-        95% { transform: scaleY(0.1); }
-      }
-
-      .animate-wink {
-        animation: wink 3s infinite ease-in-out;
-        transform-origin: center 50px;
-      }
-
-      .animate-cart-pop {
-        animation: cart-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      .tap-anim:active {
-        transform: scale(0.95);
-      }
+      body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f5f5f5; margin: 0; overflow-x: hidden; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(239, 68, 68, 0.2); } 50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.7), 0 0 70px rgba(239, 68, 68, 0.5); } }
+      .special-glow { animation: glow-pulse 3s infinite ease-in-out; }
+      .scanline { width: 100%; height: 100px; z-index: 5; background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 100%); opacity: 0.1; position: absolute; bottom: 100%; animation: scanline 6s linear infinite; }
+      @keyframes scanline { 0% { bottom: 100%; } 100% { bottom: -100px; } }
+      @keyframes cart-pop { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+      @keyframes wink { 0%, 90%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+      .animate-wink { animation: wink 3s infinite ease-in-out; transform-origin: center 50px; }
+      .animate-cart-pop { animation: cart-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .tap-anim:active { transform: scale(0.95); }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
