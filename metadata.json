@@ -1,0 +1,7 @@
+{
+  "name": "Copy of M & J Seafood Wholesale Portal 2",
+  "description": "Professional ordering platform for wholesale meats, seafood, and supplies with voice search and advanced category navigation.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
